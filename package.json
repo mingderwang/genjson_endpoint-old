@@ -10,7 +10,10 @@
   "license": "ISC",
   "bin": "index.js",
   "dependencies": {
-    "request": "^2.88.0"
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "fs": "^0.0.1-security",
+    "readdirp": "^3.3.0"
   },
   "devDependencies": {
     "pkg": "^4.4.1"
