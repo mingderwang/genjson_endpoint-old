@@ -1,0 +1,26 @@
+{
+  "name": "genjson_endpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ming-der Wang",
+  "license": "ISC",
+  "bin": "index.js",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.1"
+  },
+  "pkg": {
+    "assets": [
+      "views/**/*"
+    ],
+    "targets": [
+      "node8"
+    ]
+  }
+}
