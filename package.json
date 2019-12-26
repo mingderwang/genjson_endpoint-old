@@ -13,9 +13,12 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "fs": "^0.0.1-security",
+    "fs-promise": "^2.0.3",
+    "path": "^0.12.7",
     "readdirp": "^3.3.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
     "pkg": "^4.4.1"
   },
   "pkg": {
