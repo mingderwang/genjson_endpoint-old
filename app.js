@@ -1,4 +1,3 @@
-const postJson = require('./utils/postJson')
 const getFilePaths = require('./utils/getFilePaths')
 const rreaddir = require('./utils/readdir')
 const rreaddirSync = require('./utils/rreaddirSync')
@@ -10,8 +9,4 @@ if (process.argv.length <= 2) {
 var root_path = process.argv[2];
 
 var result = getFilePaths(root_path);
-var allFiles = rreaddirSync(root_path);
-console.log(allFiles)
-console.log('no result')
-console.log(result)
 

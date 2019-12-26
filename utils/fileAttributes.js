@@ -1,19 +1,29 @@
 const fse = require('fs-extra');
+const fs = require('fs');
 
 const fileInfo = (filename) => {
-    console.log("file: ", filename)
     var stats = {};
     try {
   stats = fse.statSync(filename);
+let isDirExists = fs.lstatSync(filename).isDirectory()
+        var fileBase64;
+        var is_folder = false
+  //console.log("Dir exists.",isDirExists);
+        if (isDirExists) {
+            fileBase64 = ""
+            is_folder = true
+        } else {
     const fileContents = fse.readFileSync(filename);
-    const fileBase64 = fileContents.toString('base64');
+    fileBase64 = fileContents.toString('base64');
+        }
   stats['data'] = fileBase64
   stats['file_path'] = filename
-  console.log("File exists.");
+        stats['is_folder'] = is_folder
         return stats
 }
 catch (e) {
-  console.log("File does not exist.");
+  console.log("File does not exist.-----with error: ",e);
+        return null
 }
 }
 
