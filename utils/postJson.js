@@ -10,7 +10,7 @@ async function postJson(filename) {
        console.log("------- directory, return")
     }
 var options = {
-    url: 'https://10.99.1.10:9200/win_index/_doc/?pipeline=attachment',
+    url: 'https://10.90.118.158:9200/win_index/_doc/?pipeline=attachment',
     method: 'POST',
     body: stats,
     json: true,
@@ -46,10 +46,11 @@ function downloadPage(options) {
     return new Promise((resolve, reject) => {
 request(options, (error, response, body) => {
             if (error) reject(error);
+    /*
             if (response.statusCode != 201) {
                 reject('Invalid status code <' + response.statusCode + '>');
             }
-    console.log('here--------',response.statusCode)
+    */
             resolve(body);
         }
 )
